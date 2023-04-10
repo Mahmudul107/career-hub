@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -37,9 +37,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className=" normal-case text-4xl font-extrabold font-mono">
-          jobJourney
-        </a>
+        <Link to='/' className="normal-case text-4xl font-extrabold font-mono">jobJourney</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="items-center hidden space-x-8 lg:flex">

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "logo": "https://example.com/images/jobcategory1.png",
+    "name": "Engineering",
+    "availableJobs": "250 Jobs available"
+  },
+  {
+    "id": "2",
+    "logo": "https://example.com/images/jobcategory2.png",
+    "name": "Marketing",
+    "availableJobs": "180 Jobs available"
+  },
+  {
+    "id": "3",
+    "logo": "https://example.com/images/jobcategory3.png",
+    "name": "Design",
+    "availableJobs": "120+ Jobs available"
+  },
+  {
+    "id": "4",
+    "logo": "https://example.com/images/jobcategory4.png",
+    "name": "Sales",
+    "availableJobs": "300 Jobs available"
+  }
+]

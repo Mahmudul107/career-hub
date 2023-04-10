@@ -4,17 +4,35 @@ import App from './App'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home'
+import Statistics from './components/Statistics'
+import AppliedJobs from './components/AppliedJobs'
+import Blog from './components/Blog'
+import ErrorPage from './components/ErrorPage'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
+    errorElement: <ErrorPage/>,
     children: [
       {
         path: '/',
-        element: <Home/>
-      }
+        element: <Home/>,
+        loader: () => fetch('category.json')
+      },
+      {
+        path: 'statistics',
+        element: <Statistics/>
+      },
+      {
+        path: 'applied-jobs',
+        element: <AppliedJobs/>
+      },
+      {
+        path: 'blog',
+        element: <Blog/>
+      },
     ]
   }
 ])
