@@ -37,28 +37,28 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className=" normal-case text-3xl font-extrabold font-mono">
+        <a className=" normal-case text-4xl font-extrabold font-mono">
           jobJourney
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="items-center hidden space-x-8 lg:flex">
           <li>
-            <NavLink
+            <NavLink to='statistics'
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               Statistics
             </NavLink>
           </li>
           <li>
-            <NavLink
+            <NavLink to='applied-jobs'
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               Applied Jobs
             </NavLink>
           </li>
           <li>
-            <NavLink
+            <NavLink to='blog'
               className={({ isActive }) => (isActive ? "active" : "default")}
             >
               Blog
