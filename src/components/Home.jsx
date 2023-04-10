@@ -2,9 +2,11 @@ import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import person from "../assets/person.png";
 import Categories from "./Categories";
+import JobFeatured from "./JobFeatured";
 
 const Home = () => {
-  const jobsCategories = useLoaderData();
+  const jobFeatures = useLoaderData();
+  console.log(jobFeatures);
 
   return (
     <div>
@@ -15,7 +17,7 @@ const Home = () => {
             <h1 className="text-7xl font-sans font-semibold mb-6">
               Closer to Your
             </h1>
-            <h1 className="text-7xl font-sans font-semibold mb-6 text-blue-500">
+            <h1 className="text-7xl font-sans font-semibold mb-6 text-blue-500 animate-pulse bg-gradient-to-r bg-clip-text text-transparent from-purple-500 to-blue-800">
               Dream Job
             </h1>
             <p>
@@ -26,9 +28,9 @@ const Home = () => {
               </small>
             </p>
             <div className="flex flex-col items-center md:flex-row mt-8">
-              <Link to="/books" className="btn-primary md:w-auto md:mr-4">
+              <Link to="/" className="btn-primary md:w-auto md:mr-4">
                 <div className="inline-flex items-center justify-center w-full h-full">
-                  <p className="mr-3">Visit Store</p>
+                  <p className="mr-3">Get Started</p>
                 </div>
               </Link>
             </div>
@@ -41,21 +43,49 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-20">
-        <h1 className="text-5xl font-extrabold font-mono mb-3">
-          Job Category List
-        </h1>
-        <p>
-          <small>
-            Explore thousands of job opportunities with all the information you
-            need. Its your future.
-          </small>
-        </p>
+
+      {/* Job Category section */}
+      <div className="grid sm:grid-cols-1 xs:grid-cols-1 px-24">
+        <div className="text-center mt-20">
+          <h1 className="text-5xl font-extrabold font-mono mb-3">
+            Job Category List
+          </h1>
+          <p>
+            <small>
+              Explore thousands of job opportunities with all the information
+              you need. Its your future.
+            </small>
+          </p>
+        </div>
+        <Categories />
+        {/* <div className="grid lg:grid-cols-4 sm:grid-cols-2">
+          {jobsCategories.map((jobCategory) => (
+            <Categories key={jobCategory.id} jobCategory={jobCategory} />
+          ))}
+        </div> */}
       </div>
-      <div className="grid lg:grid-cols-4 sm:grid-cols-2">
-        {jobsCategories.map((jobCategory) => (
-          <Categories key={jobCategory.id} jobCategory={jobCategory} />
-        ))}
+
+      {/* Featured Section */}
+      <div>
+        <div className="text-center mt-20 mb-8">
+          <h1 className="text-5xl font-extrabold font-mono mb-3">
+            Featured Jobs
+          </h1>
+          <p>
+            <small>
+              Explore thousands of job opportunities with all the information
+              you need. Its your future.
+            </small>
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-2 px-24 md:max-w-full md:max-h-full">
+          {
+            jobFeatures.map(jobFeature => <JobFeatured
+              key={jobFeature.id}
+              jobFeature={jobFeature}
+            />)
+          }
+        </div>
       </div>
     </div>
   );

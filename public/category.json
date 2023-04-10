@@ -1,8 +1,8 @@
 [
   {
     "id": "1",
-    "logo": "https://i.ibb.co/v4cyg0z/accounts-1.png",
-    "name": "Engineering Job",
+    "logo": "https://i.ibb.co/6gNWGHf/chip-1.png",
+    "name": "Engineering",
     "availableJobs": "250 Jobs available"
   },
   {
@@ -19,8 +19,8 @@
   },
   {
     "id": "4",
-    "logo": "https://i.ibb.co/6gNWGHf/chip-1.png",
-    "name": "Sales & Marketing",
+    "logo": "https://i.ibb.co/v4cyg0z/accounts-1.png",
+    "name": "Sales",
     "availableJobs": "300 Jobs available"
   }
 ]

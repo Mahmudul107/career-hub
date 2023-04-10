@@ -37,7 +37,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <Link to='/' className="normal-case text-4xl font-extrabold font-mono">jobJourney</Link>
+        <Link to='/' className="normal-case text-4xl font-extrabold font-mono bg-gradient-to-r bg-clip-text text-transparent to-indigo-800 from-blue-500">jobJourney</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="items-center hidden space-x-8 lg:flex">
