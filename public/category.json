@@ -1,26 +1,26 @@
 [
   {
     "id": "1",
-    "logo": "https://example.com/images/jobcategory1.png",
-    "name": "Engineering",
+    "logo": "https://i.ibb.co/v4cyg0z/accounts-1.png",
+    "name": "Engineering Job",
     "availableJobs": "250 Jobs available"
   },
   {
     "id": "2",
-    "logo": "https://example.com/images/jobcategory2.png",
+    "logo": "https://i.ibb.co/Fsk41Sn/business-1.png",
     "name": "Marketing",
     "availableJobs": "180 Jobs available"
   },
   {
     "id": "3",
-    "logo": "https://example.com/images/jobcategory3.png",
+    "logo": "https://i.ibb.co/bLFZz17/social-media-1.png",
     "name": "Design",
     "availableJobs": "120+ Jobs available"
   },
   {
     "id": "4",
-    "logo": "https://example.com/images/jobcategory4.png",
-    "name": "Sales",
+    "logo": "https://i.ibb.co/6gNWGHf/chip-1.png",
+    "name": "Sales & Marketing",
     "availableJobs": "300 Jobs available"
   }
 ]
