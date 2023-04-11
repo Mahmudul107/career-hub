@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import person from "../assets/person.png";
 import Categories from "./Categories";
@@ -7,6 +7,7 @@ import JobFeatured from "./JobFeatured";
 const Home = () => {
   const jobFeatures = useLoaderData();
   console.log(jobFeatures);
+  const [seeAllJobs, setSeeAllJobs] = useState(false)
 
   return (
     <div>
@@ -58,11 +59,6 @@ const Home = () => {
           </p>
         </div>
         <Categories />
-        {/* <div className="grid lg:grid-cols-4 sm:grid-cols-2">
-          {jobsCategories.map((jobCategory) => (
-            <Categories key={jobCategory.id} jobCategory={jobCategory} />
-          ))}
-        </div> */}
       </div>
 
       {/* Featured Section */}
@@ -80,12 +76,13 @@ const Home = () => {
         </div>
         <div className="grid lg:grid-cols-2 px-24 md:max-w-full md:max-h-full">
           {
-            jobFeatures.map(jobFeature => <JobFeatured
-              key={jobFeature.id}
-              jobFeature={jobFeature}
-            />)
-          }
+          jobFeatures.slice(0, seeAllJobs ? 6 : 4).map((jobFeature) => (
+            <JobFeatured key={jobFeature.id} jobFeature={jobFeature} />
+          ))}
         </div>
+      </div>
+      <div className="text-center  my-12">
+        <button onClick={setSeeAllJobs} className="btn-primary shadow-lg">See All Jobs</button>
       </div>
     </div>
   );
