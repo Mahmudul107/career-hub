@@ -77,7 +77,7 @@ const Blog = () => {
             <div class="collapse-title text-xl font-medium flex gap-5">
               <h2 class="text-2xl text-black">
                 <span class=" bg-purple-400 rounded-lg p-1"> 4.</span> What is
-                useMenu?
+                useMemo?
               </h2>
               <span class="bg-green-700 rounded-lg  p-2">&#8595;</span>
             </div>
@@ -86,9 +86,10 @@ const Blog = () => {
                 <span class="text-xl font-bold italic bg-yellow-400 p-1 rounded-lg">
                   Ans:
                 </span>
-                useMenu is used to get menu items derived from the resources.
-                These items include a link to the dashboard page (if it exists)
-                and links to the user-defined resources.
+                useMemo is a React hook that allows you to memoize expensive
+                computations and recompute them only when the input values
+                change. This can improve the performance of your application by
+                avoiding unnecessary re-renders.
               </p>
             </div>
           </div>
