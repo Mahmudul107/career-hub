@@ -1,10 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { MapPinIcon, CurrencyDollarIcon } from "@heroicons/react/24/solid";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AppliedJobs = () => {
-  const { cartArray, products } = useLoaderData();
+  const { cartArray } = useLoaderData();
   console.log(cartArray);
+  
+  // add state to store the filter value
+  const [filter, setFilter] = useState("");
+
+  // filter the job list based on the filter value
+  const filteredJobs = filter
+    ? cartArray.filter((cart) => cart.remote_or_onsite === filter)
+    : cartArray;
 
   return (
     <div>
@@ -12,8 +20,26 @@ const AppliedJobs = () => {
         Applied Jobs
       </h2>
 
-      <div>
-        {cartArray.map((cart, index) => (
+      <div className="mt-32">
+        <div className="flex gap-8 justify-evenly mb-6">
+          <button
+            className={`btn-feature ${
+              filter === "Remote" ? "bg-purple-400" : "bg-purple-200"
+            }`}
+            onClick={() => setFilter("Remote")}
+          >
+            Remote Jobs
+          </button>
+          <button
+            className={`btn-feature ${
+              filter === "Onsite" ? "bg-purple-400" : "bg-purple-200"
+            }`}
+            onClick={() => setFilter("Onsite")}
+          >
+            On-site Jobs
+          </button>
+        </div>
+        {filteredJobs.map((cart, index) => (
           <div key={index}>
             <div className="flex justify-between items-center px-8 border gap-6 py-16 mx-auto sm:max-w-xl  lg:max-w-screen-md md:px-24 lg:px-4 lg:py-4 mt-4">
               <div className="flex gap-6">
@@ -51,7 +77,6 @@ const AppliedJobs = () => {
                 <button className="btn-primary">View Details</button>
               </Link>
             </div>
-            
           </div>
         ))}
       </div>
