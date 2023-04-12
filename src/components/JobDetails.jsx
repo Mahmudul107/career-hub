@@ -6,11 +6,19 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/solid";
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToDb } from "../utils/fakeDB";
 
 const JobDetails = () => {
   const { Id } = useParams();
   const [data, setData] = useState({});
+  // const [apply, setApply] = useState([])
   const jobDetails = useLoaderData();
+
+  const handleApply= (data) =>{
+    console.log(data)
+    addToDb(data.id)
+  }
+
 
   useEffect(() => {
     if (jobDetails) {
@@ -18,6 +26,7 @@ const JobDetails = () => {
       setData(find);
     }
   }, []);
+
 
   return (
     <div>
@@ -95,7 +104,7 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-            <button className="w-5/6 h-12 text-white bg-purple-500 hover:bg-purple-600 transition duration-300 rounded-lg mt-3">Apply Now </button>
+            <button onClick={() => handleApply(data)} className="w-5/6 h-12 text-white bg-purple-500 hover:bg-purple-600 transition duration-300 rounded-lg mt-3">Apply Now </button>
         </div> 
       </div>
     </div>

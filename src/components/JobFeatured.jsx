@@ -31,7 +31,7 @@ const JobFeatured = ({ jobFeature }) => {
           <p>{salary}</p>
         </div>
       </div>
-        <Link to={`/job/${jobFeature.id}`} className="inline-flex items-center h-10 px-3 font-medium text-white transition duration-300 rounded shadow-lg  md:mb-0 bg-purple-400 hover:bg-purple-600">
+        <Link to={`../job/${jobFeature.id}`} className="inline-flex items-center h-10 px-3 font-medium text-white transition duration-300 rounded shadow-lg  md:mb-0 bg-purple-400 hover:bg-purple-600">
           <div className="inline-flex items-center justify-center w-full h-full">
             <p className="mr-3">View Details</p>
           </div>
