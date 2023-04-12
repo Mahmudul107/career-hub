@@ -5,7 +5,7 @@ import Categories from "./Categories";
 import JobFeatured from "./JobFeatured";
 
 const Home = () => {
-  const jobFeatures = useLoaderData([]);
+  const jobFeatures = useLoaderData();
   // console.log(jobFeatures)
   const [seeAllJobs, setSeeAllJobs] = useState(false)
  

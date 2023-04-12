@@ -16,12 +16,12 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
-    errorElement: <ErrorPage/>,
+    // errorElement: <ErrorPage/>,
     children: [
       {
         path: '/',
         element: <Home/>,
-        loader: () => fetch('jobFeatured.json')
+        loader: () => fetch('/jobFeatured.json')
       },
       {
         path: '/job/:Id',
