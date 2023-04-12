@@ -5,7 +5,8 @@ import Categories from "./Categories";
 import JobFeatured from "./JobFeatured";
 
 const Home = () => {
-  const jobFeatures = useLoaderData();
+  const jobFeatures = useLoaderData([]);
+  // console.log(jobFeatures)
   const [seeAllJobs, setSeeAllJobs] = useState(false)
  
 
@@ -85,7 +86,8 @@ const Home = () => {
         </div>
       </div>
       <div className="text-center  my-12">
-        <button onClick={setSeeAllJobs} className="btn-primary shadow-lg">See All Jobs</button>
+      <button onClick={() => setSeeAllJobs(true)} className="btn-primary shadow-lg">See All Jobs</button>
+
       </div>
     </div>
   );

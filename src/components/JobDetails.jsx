@@ -22,7 +22,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     if (jobDetails) {
-      let find = jobDetails.find((jobDetail) => jobDetail.id == Id);
+      let find = jobDetails.find((jobDetail) => jobDetail.id === Id);
       setData(find);
     }
   }, []);
